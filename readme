@@ -1,0 +1,17 @@
+TO BUILD:
+mvn clean install
+
+TO RUN:
+cd presentation
+mvn spring-boot:run
+
+Swagger UI:
+http://localhost:8080/swagger-ui.html#/product-controller
+
+- I am using embedded hsqldb to allow easy setup/development, in production other databases should be used
+- It is debatable whether or not GET /product should return our own (smaller) data type rather than spring's Page
+
+TODOS:
+- use lombok for data classes
+- add bean validators
+- more tests in ProductControllerTest
