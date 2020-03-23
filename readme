@@ -15,5 +15,6 @@ TODOS:
 - use lombok for data classes
 - add bean validators
 - more tests in ProductControllerTest
-- the optional order controller/service/repository are not yet tested.
+- the optional order controller/repository are not yet tested.
 - the email is not validated at the moment, probably I should add hibernate validator
+- probably the order should contain a quantity for the products rather than allowing only one product instance per order

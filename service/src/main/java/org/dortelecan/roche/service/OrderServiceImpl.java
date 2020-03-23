@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
+import javax.transaction.Transactional;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Set;
@@ -25,6 +26,7 @@ public class OrderServiceImpl implements OrderService {
     private OrderRepository orderRepository;
 
     @Override
+    @Transactional
     public Order createOrder(String email, Set<Long> productIds) {
         log.info("Creating order for email:{} , productIds: {}", email, productIds);
         Assert.notNull(email, "Should have an email");
